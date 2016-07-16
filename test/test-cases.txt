@@ -6,9 +6,17 @@ a
 {"entityMap":{},"blocks":[{"key":"99n0j","text":"asdf","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":3,"length":1,"style":"BOLD"}],"entityRanges":[]}]}
 asd**f**
 
+>> Inline style with whitespace
+{"entityMap":{},"blocks":[{"key":"99n0j","text":"asdf  ","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":6,"style":"BOLD"}],"entityRanges":[]}]}
+**asdf**  
+
 >> Nested Inline Style
 {"entityMap":{},"blocks":[{"key":"9nc73","text":"BoldItalic","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":10,"style":"BOLD"},{"offset":0,"length":10,"style":"ITALIC"}],"entityRanges":[]}]}
 _**BoldItalic**_
+
+>> Nested Inline Style with whitespace
+{"entityMap":{},"blocks":[{"key":"9nc73","text":"BoldItalic    ","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":14,"style":"BOLD"},{"offset":0,"length":10,"style":"ITALIC"}],"entityRanges":[]}]}
+_**BoldItalic**_    
 
 >> Adjacent Inline Style
 {"entityMap":{},"blocks":[{"key":"9nc73","text":"BoldItalic","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":4,"length":6,"style":"BOLD"},{"offset":0,"length":4,"style":"ITALIC"}],"entityRanges":[]}]}

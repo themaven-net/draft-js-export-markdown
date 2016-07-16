@@ -20,6 +20,7 @@ const {
 
 const CODE_INDENT = '    ';
 const LINE_BREAK = '  \n';
+const STRIP_WHITESPACE = /([\s]*)([\W\w]*[^\s]+)([\s]*)/;
 
 class MarkupGenerator {
   blocks: Array<ContentBlock>;
@@ -202,21 +203,21 @@ class MarkupGenerator {
         }
         let content = encodeContent(text);
         if (style.has(BOLD)) {
-          content = `**${content}**`;
+          content = content.replace(STRIP_WHITESPACE, '$1**$2**$3');
         }
         if (style.has(UNDERLINE)) {
           // TODO: encode `+`?
-          content = `++${content}++`;
+          content = content.replace(STRIP_WHITESPACE, '$1++$2++$3');
         }
         if (style.has(ITALIC)) {
-          content = `*${content}*`;
+          content = content.replace(STRIP_WHITESPACE, '$1*$2*$3');
         }
         if (style.has(STRIKETHROUGH)) {
           // TODO: encode `~`?
-          content = `~~${content}~~`;
+          content = content.replace(STRIP_WHITESPACE, '$1~~$2~~$3');
         }
         if (style.has(CODE)) {
-          content = (blockType === BLOCK_TYPE.CODE) ? content : '`' + content + '`';
+          content = (blockType === BLOCK_TYPE.CODE) ? content : content.replace(STRIP_WHITESPACE, '$1`$2`$3');
         }
         return content;
       }).join('');
