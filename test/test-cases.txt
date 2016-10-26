@@ -44,3 +44,18 @@ An ordered list:
 
 1. One
 2. Two
+
+>> Soft new lines
+{"entityMap":{},"blocks":[{"key":"f1b2b","text":"One\nTwo\nThree","type":"ordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[]},{"key":"5vunp","text":"Four","type":"ordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[]},{"key":"9kfnu","text":"One\nTwo","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[]},{"key":"2o0m9","text":"Three","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[]},{"key":"4vkqf","text":"Line 1\nLine 2","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[]}]}
+1. One  
+Two  
+Three
+2. Four
+
+
+- One  
+Two
+- Three
+
+Line 1  
+Line 2

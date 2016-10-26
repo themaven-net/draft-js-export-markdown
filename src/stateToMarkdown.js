@@ -19,6 +19,7 @@ const {
 } = INLINE_STYLE;
 
 const CODE_INDENT = '    ';
+const LINE_BREAK = '  \n';
 
 class MarkupGenerator {
   blocks: Array<ContentBlock>;
@@ -231,7 +232,7 @@ class MarkupGenerator {
         let alt = data.alt ? ` "${escapeTitle(data.alt)}"` : '';
         return `![${alt}](${encodeURL(src)})`;
       } else {
-        return content;
+        return content.replace(/\n/g, LINE_BREAK);
       }
     }).join('');
   }
