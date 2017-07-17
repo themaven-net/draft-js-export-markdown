@@ -206,8 +206,7 @@ class MarkupGenerator {
           content = content.replace(STRIP_WHITESPACE, '$1**$2**$3');
         }
         if (style.has(UNDERLINE)) {
-          // TODO: encode `+`?
-          content = content.replace(STRIP_WHITESPACE, '$1++$2++$3');
+          content = content.replace(STRIP_WHITESPACE, '$1__$2__$3');
         }
         if (style.has(ITALIC)) {
           content = content.replace(STRIP_WHITESPACE, '$1*$2*$3');
