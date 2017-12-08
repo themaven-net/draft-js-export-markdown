@@ -127,7 +127,10 @@ class MarkupGenerator {
       }
       case BLOCK_TYPE.BLOCKQUOTE: {
         this.insertLineBreaks(1);
-        this.output.push(' > ' + this.renderBlockContent(block) + '\n');
+        const blockquoted = this.renderBlockContent(block).split(/\r?\n/);
+        for (let i = 0; i < blockquoted.length; i++) {
+          this.output.push(' > ' + blockquoted[i] + '\n');
+        }
         break;
       }
       case BLOCK_TYPE.CODE: {
